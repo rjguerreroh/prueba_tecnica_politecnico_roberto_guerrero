@@ -1,0 +1,15 @@
+<div class="card m-4" style="width: 18rem;">
+  <img [src]="country.img" class="card-img-top" [alt]="country.countryName" style="height: 200px;">
+  <div class="card-body">
+    <h5 class="card-title">{{country.countryName}}</h5>
+    <ul class="list-group">
+      <li class="list-group-item">Continente: {{country.continentName}}</li>
+      <li class="list-group-item">Poblacion: {{country.population | number}}</li>
+      <li class="list-group-item">Capital: {{country.capital}}</li>
+      <div class="d-flex">
+        <button type="button" class="btn btn-primary my-2" [routerLink]="['/country-detail', country.id]">Ver</button>
+        <button type="button" class="btn btn-danger my-2 mx-2" (click)="onDelete()">Eliminar</button>
+      </div>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+@if(country.countryName){
+  <h1 class="my-2">{{country.countryName}}</h1>
+  
+  <div class="d-flex">
+    <img [src]="country.img" class="card-img-top" [alt]="country.countryName" style="width: 700px; height: 500px;">
+    <ul class="mx-2">
+      <li>{{country.continentName}}</li>
+      <li>{{country.population | number}}</li>
+      <li>{{country.capital}}</li>
+    </ul>
+
+  </div>
+  <p class="my-4">
+    {{country.description}}
+  </p>
+  <button type="button" class="btn btn-primary my-4" routerLink="/countries">atras</button>
+}@else {
+  <div class="m-2"> No hay resultados</div>
+}
+
+

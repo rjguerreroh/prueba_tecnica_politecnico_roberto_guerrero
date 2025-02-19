@@ -1,0 +1,12 @@
+
+  <div class="d-flex flex-wrap justify-content-center m-4">
+    @for(country of countries; track $index){
+      <div class="p-2">
+        <img [src]="country.img" [alt]="country.countryName" class="img-fluid" style="width: 100px; height: 100px;">
+        <p class="text-center">{{country.countryName}}</p>
+      </div>
+    }
+  </div>
+  <button type="button" class="btn btn-primary m-4" routerLink="/countries">Iniciar</button>
+
+

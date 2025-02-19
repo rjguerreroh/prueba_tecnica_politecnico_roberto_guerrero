@@ -1,0 +1,86 @@
+<h1>Agregar pais</h1>
+<hr>
+<form [formGroup]="countryForm" (ngSubmit)="onSave()">
+  <div class="form-group row my-2">
+    <label for="inputId" class="col-sm-2 col-form-label">Id</label>
+    <div class="col-sm-10">
+      <input formControlName="id" type="text" class="form-control" name="id" id="inputId" placeholder="Id">
+      @if(countryForm.get('id')!.invalid && (countryForm.get('id')!.dirty || countryForm.get('id')!.touched)){
+        @if(countryForm.get('id')!.errors){
+          <div class="text-danger">El campo Id es requerido.</div>
+        }
+      }
+    </div>
+  </div>
+  <div class="form-group row my-2">
+    <label for="countryName" class="col-sm-2 col-form-label">Nombre</label>
+    <div class="col-sm-10">
+      <input formControlName="countryName" name="countryName" type="text" class="form-control" id="countryName" placeholder="Nombre del pais">
+      @if(countryForm.get('countryName')!.invalid && (countryForm.get('countryName')!.dirty || countryForm.get('countryName')!.touched)){
+        @if(countryForm.get('countryName')!.errors){
+          <div class="text-danger">El campo nombre es requerido.</div>
+        }
+      }
+    </div>
+  </div>
+  <div class="form-group row my-2">
+    <label for="inputpopulation" class="col-sm-2 col-form-label">Poblacion</label>
+    <div class="col-sm-10">
+      <input formControlName="population" type="text" class="form-control" id="inputpopulation" name="population" placeholder="Poblacion">
+      @if(countryForm.get('population')!.invalid && (countryForm.get('population')!.dirty || countryForm.get('population')!.touched)){
+        @if(countryForm.get('population')!.errors){
+          <div class="text-danger">El campo poblacion es requerido.</div>
+        }
+      }
+    </div>
+  </div>
+  <div class="form-group row my-2">
+    <label for="inputCapital" class="col-sm-2 col-form-label">Capital</label>
+    <div class="col-sm-10">
+      <input formControlName="capital" type="text" class="form-control" id="inputCapital" name="capital" placeholder="Capital">
+      @if(countryForm.get('capital')!.invalid && (countryForm.get('capital')!.dirty || countryForm.get('capital')!.touched)){
+        @if(countryForm.get('capital')!.errors){
+          <div class="text-danger">El campo Capital es requerido.</div>
+        }
+      }
+    </div>
+  </div>
+  <div class="form-group row my-2">
+    <label for="inputContinentName" class="col-sm-2 col-form-label">Nombre del continente</label>
+    <div class="col-sm-10">
+      <input formControlName="continentName" type="text" class="form-control" id="inputContinentName" name="continentName" placeholder="Nombre del continente">
+      @if(countryForm.get('continentName')!.invalid && (countryForm.get('continentName')!.dirty || countryForm.get('continentName')!.touched)){
+        @if(countryForm.get('continentName')!.errors){
+          <div class="text-danger">El campo continente es requerido.</div>
+        }
+      }
+    </div>
+  </div>
+  <div class="form-group row my-2">
+    <label for="inputImg" class="col-sm-2 col-form-label">Url Imagen</label>
+    <div class="col-sm-10">
+      <input formControlName="img" type="text" class="form-control" id="inputImg" name="img" placeholder="Url">
+      @if(countryForm.get('img')!.invalid && (countryForm.get('img')!.dirty || countryForm.get('img')!.touched)){
+        @if(countryForm.get('img')!.errors){
+          <div class="text-danger">El campo url es requerido.</div>
+        }
+      }
+    </div>
+  </div>
+  <div class="form-group row my-2">
+    <label for="inputDescription" class="col-sm-2 col-form-label">Descripcion</label>
+    <div class="col-sm-10">
+      <input formControlName="description" type="text" class="form-control" id="inputDescription" name="description" placeholder="Descripcion">
+      @if(countryForm.get('description')!.invalid && (countryForm.get('description')!.dirty || countryForm.get('description')!.touched)){
+        @if(countryForm.get('description')!.errors){
+          <div class="text-danger">El campo descripcion es requerido.</div>
+        }
+      }
+    </div>
+  </div>
+  <div class="d-flex my-4">
+    <button type="submit" class="btn btn-primary ml-2">Guardar</button>
+    <button type="button" class="btn btn-link" routerLink="/countries">Atras</button>
+  </div>
+</form>
+

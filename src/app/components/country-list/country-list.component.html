@@ -1,0 +1,10 @@
+<h1>Paises</h1>
+<button type="button" class="btn btn-primary my-4" routerLink="/country-new">Agregar pais</button>
+<hr>
+<div class="row row-cols-4">
+  @if(countries.length){
+    @for(country of countries; track $index){
+      <country-item [country]="country"/>
+    }
+  }
+</div>
